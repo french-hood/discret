@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>we</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Script qui se lance immédiatement
+        window.addEventListener('load', function() {
+            const audio = document.getElementById('background-music');
+            if (audio) {
+                audio.volume = 0.3;
+                audio.play().catch(e => console.log('Erreur initiale:', e));
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="text-container">
+        <div class="typing-text" id="typing-text"></div>
+    </div>
+    
+    <audio id="background-music" loop autoplay>
+        <source src="music.mp3" type="audio/mpeg">
+        <source src="music.ogg" type="audio/ogg">
+        Votre navigateur ne supporte pas l'élément audio.
+    </audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
